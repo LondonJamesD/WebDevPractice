@@ -8,13 +8,39 @@
                 width: 600px; 
                 height: auto;
             }
-
+            h1 
+            {
+                color: cadetblue;
+                
+            }
         </style>
     </head>
 
     <body>
         <h1>Welcome To Hamilton Test Website</h1>
         <img src = "https://cdn.britannica.com/96/115796-050-3B9D84C6/Hamilton-Ont.jpg">
+        <blockquote> "Test 123" -London Dummer</blockquote>
+        <button onclick="changeQuote()"> Change Quote</button>
+        <script>
+            var index = 0;
+            function changeQuote()
+            {
+                var quotes = 
+                [
+                    `"I like game development" - London Dummer`,
+                    `"Test 12345t"`,
+                    `"AHAHAHAHAHA"`,
+                    `"Bing bong"`,
+                    `"Test 123" - London Dummer`
+                    
+                ];
+                var blockquote = document.querySelector("blockquote");
+                index +=1;
+                if(index >= quotes.length) index = 0;
+                blockquote.innerHTML = quotes[index];
+            }
+
+        </script>
         <p> Hello earthling</p>
     </body>
 </html>
